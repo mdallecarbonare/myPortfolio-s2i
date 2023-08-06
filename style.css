@@ -202,7 +202,7 @@ span {
 }
 footer {
   margin-top: 50px;
-  margin-bottom: 10px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -342,7 +342,6 @@ html {
   outline: none;
   padding: 13px 13px 13px 54px;
 }
-
 
 /* Icons ---------------------------------- */
 #name {
