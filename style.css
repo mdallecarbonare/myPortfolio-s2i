@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+.header {
+  background-color: grey;
+  box-shadow: 1px 1px 1px black;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.logo {
+  width: 54px;
+  height: 54px;
+  float: left;
+  padding: 10px;
+}
+
+.immagine-logo {
+  height: 100%;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  clear: both;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.menu a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+.menu a:hover {
+  background-color: lightgrey;
+  box-shadow: 2px 2px 2px black;
+  color: grey;
+}
+.icona-bottone {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  float: right;
+  position: relative;
+}
+
+.icon {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 25px;
+  transform: translate(-50%, -50%);
+}
+
+.nav {
+  top: 25px;
+}
+
+.nav1 {
+  top: 18px;
+}
+
+.nav2 {
+  bottom: 18px;
+}
+
+.bottone {
+  display: none;
+}
+
+.bottone:checked ~ .menu {
+  max-height: 200px;
+}
+.bottone:checked ~ .icona-bottone .nav {
+  background-color: transparent;
+}
+.bottone:checked ~ .icona-bottone .nav1 {
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 12.5px;
+  top: 25px;
+
+  /* transform: translate(-50%, -50%); */
+}
+.bottone:checked ~ .icona-bottone .nav2 {
+  transform: rotate(45deg);
+  position: absolute;
+  left: 12.5px;
+  top: 25px;
+
+  /* transform: translate(-50%, -50%); */
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.immagine-profilo img {
+  width: 250px;
+  margin-top: 150px;
+  border-radius: 50%;
+  padding: 20px;
+}
+.about-me {
+  font-size: 35px;
+  width: 70%;
+  margin: 100px 0;
+  line-height: 40px;
+}
+
+.skills {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+.h-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.s-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill {
+  width: 150px;
+  text-align: center;
+}
+
+.skills img {
+  width: 100%;
+  padding: 20px;
+}
+
+.contacts {
+  width: 100%;
+}
+.data {
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+.data form {
+  width: 500px;
+  height: 400px;
+}
+
+.social a img {
+  width: 50px;
+}
+span {
+  font-size: 20px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: rgba(241, 236, 233, 0.862);
+  text-shadow: 2px 2px 2px grey;
+  display: none;
+}
+.skill img:hover {
+  text-align: center;
+  transition: 0.5s;
+  width: 200px;
+  filter: drop-shadow(5px 5px 5px black);
+}
+.skill img:hover ~ span {
+  display: block;
+  font-size: 40px;
+  transition: 0.5s;
+  translate: 20px -10px;
+}
+.social a img:hover {
+  width: 90px;
+  filter: drop-shadow(2px 2px 2px black);
+  transition: 0.4s;
+}
+footer {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  li a {
+    float: left;
+    margin: 0 50px;
+  }
+  .menu {
+    clear: none;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .immagine-profilo img {
+    border-radius: 15%;
+    width: 300px;
+  }
+  .skills {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+  }
+  .contacts {
+    margin-top: 200px;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 1025px) {
+  li a {
+    float: left;
+    margin: 0 100px;
+  }
+  .menu {
+    clear: none;
+  }
+  .description {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .about-me {
+    padding: 10px;
+    font-size: 25px;
+  }
+  .skills {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .h-skill {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  .s-skill {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+  }
+  .immagine-profilo img {
+    border-radius: 15%;
+    width: 400px;
+    margin-top: 0px;
+  }
+  .contacts {
+    margin-top: 200px;
+  }
+}
+
+/* prova form */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+  background: url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+#feedback-page {
+  text-align: center;
+}
+
+#form-main {
+  width: 100%;
+  float: left;
+  padding-top: 0px;
+}
+
+#form-div {
+  background-color: rgba(72, 72, 72, 0.4);
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-bottom: 50px;
+  width: 450px;
+  float: left;
+  left: 50%;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: -260px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+.feedback-input {
+  color: #3c3c3c;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #fbfbfb;
+  padding: 13px 13px 13px 54px;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.feedback-input:focus {
+  background: #fff;
+  box-shadow: 0;
+  border: 3px solid grey;
+  color: grey;
+  outline: none;
+  padding: 13px 13px 13px 54px;
+}
+
+
+/* Icons ---------------------------------- */
+#name {
+  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#name:focus {
+  background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+  background-size: 30px 30px;
+  background-position: 8px 5px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#email {
+  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#email:focus {
+  background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+#comment {
+  background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+  background-size: 30px 30px;
+  background-position: 11px 8px;
+  background-repeat: no-repeat;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  line-height: 150%;
+  resize: none;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+  background-color: white;
+}
+
+#button-blue {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  float: left;
+  width: 100%;
+  border: #fbfbfb solid 4px;
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+  font-size: 24px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+}
+
+#button-blue:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: grey;
+}
+
+/* .submit:hover {
+  color: #3498db;
+} */
+
+.ease {
+  width: 0px;
+  height: 74px;
+  background-color: #fbfbfb;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+/* .submit:hover .ease {
+  width: 100%;
+  background-color: white;
+} */
+
+@media only screen and (max-width: 580px) {
+  #form-div {
+    left: 3%;
+    margin-right: 3%;
+    width: 88%;
+    margin-left: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}

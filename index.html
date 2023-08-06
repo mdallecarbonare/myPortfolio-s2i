@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <title>Marco Dalle Carbonare</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <a class="logo" href="#">
+        <img class="immagine-logo" src="logo-home.png" alt="Logo Homepage" />
+      </a>
+      <input class="bottone" type="checkbox" id="bottone" />
+      <label for="bottone" class="icona-bottone">
+        <div class="icon nav"></div>
+        <div class="icon nav1"></div>
+        <div class="icon nav2"></div>
+      </label>
+      <ul class="menu">
+        <li><a href="#aboutnav">About</a></li>
+        <li><a href="#skillnav">Skills</a></li>
+        <li><a href="#contactnav">Contatti</a></li>
+      </ul>
+    </div>
+
+    <div id="aboutnav" class="description">
+      <div class="immagine-profilo">
+        <img src="me-2.jpeg" alt="Immagine profilo personale" />
+      </div>
+      <div class="about-me">
+        Dopo una formazione tecnica/meccanica e 11 anni di esperienza da operaio
+        montatore ho sentito il bisogno di ampliare le mie conoscienze e di
+        apportare un cambiamento nella mia vita. Con non poche difficoltà ho
+        deciso di intraprendere un percorso formativo nell'ambito digitale e in
+        particolare riguardante lo sviluppo web,quindi completamente al di fuori
+        dalla mia comfort-zone. Ho scelto di soddisfare il mio bisogno di
+        innovazione e di stare al passo con il mondo che cambia. <br />
+        Sono alla ricerca di un lavoro in un ambiente stimolante dal quale poter
+        avere soddisfazione, crescita professionale e personale, sfruttando le
+        mie capacità di problem solving e lavoro di squadra, unite alla mia
+        attitudine all'apprendimento attivo e continuo.
+      </div>
+    </div>
+
+    <div id="skillnav" class="skills">
+      <div class="h-skill">
+        <div class="skill excel">
+          <img src="excel.png" alt="" /> <span>Excel</span>
+        </div>
+        <div class="skill atom">
+          <img src="icons8-atom.png" alt="" /> <span>Atom</span>
+        </div>
+        <div class="skill css">
+          <img class="icon-css" src="icons8-css.png" alt="" /> <span>Css</span>
+        </div>
+        <div class="skill html">
+          <img class="icon-html" src="icons8-html.png" alt="" /><span
+            >Html</span
+          >
+        </div>
+      </div>
+      <div class="s-skill">
+        <div class="skill apprendimento">
+          <img class="icon-learning" src="apprendimento.png" alt="" />
+          <span>Learning</span>
+        </div>
+        <div class="skill creatività">
+          <img class="icon-creativity" src="creativity.png" alt="" />
+          <span>Creativity</span>
+        </div>
+        <div class="skill Team">
+          <img class="icon-team-work" src="team-work.png" alt="" />
+          <span>Team Work</span>
+        </div>
+        <div class="skill solving">
+          <img class="icon-problem-solving" src="problem-solving.png" alt="" />
+          <span>Problem Solving</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="contactnav" class="contacts">
+      <div class="data">
+        <form action="https://formspree.io/f/mpzgqgve" method="post" class="form" id="form1">
+          <p class="name">
+            <input
+              name="name"
+              type="text"
+              class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+              placeholder="Name"
+              id="name"
+              required
+            />
+          </p>
+          <p class="last name">
+            <input
+              name="last-name"
+              type="text"
+              class="validate[required,custom[onlyLetter],length[0,100]] feedback-input"
+              placeholder="Last name"
+              id="name"
+              required
+            />
+          </p>
+
+          <p class="email">
+            <input
+            aria-placeholder="e-mail"
+              name="email"
+              type="email"
+              class="validate[required,custom[email]] feedback-input"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </p>
+
+          <p class="text">
+            <textarea
+              name="text"
+              class="validate[required,length[6,300]] feedback-input"
+              id="comment"
+              placeholder="Please leave a message..."
+              required
+            ></textarea>
+          </p>
+
+          <div class="submit">
+            <input type="submit" value="SEND" id="button-blue" />
+            <div class="ease"></div>
+          </div>
+        </form>
+      </div>
+      <div class="social">
+        <a href="https://it-it.facebook.com/"
+          ><img src="facebook.png" alt=""
+        /></a>
+        <a href="https://github.com/login"><img src="github.png" alt="" /></a>
+        <a href="https://www.instagram.com/"
+          ><img src="instagram.png" alt=""
+        /></a>
+        <a href="mailto:m.dallecarbonare91@gmail.com"
+          ><img src="gmail.png"
+        /></a>
+      </div>
+    </div>
+  </body>
+
+  <footer>Website made by Marco Dalle Carbonare &#169;</footer>
+</html>
